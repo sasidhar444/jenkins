@@ -1,5 +1,6 @@
 ---
     - name: Deploy
+    - hosts: all
       vars:
         url: "https://storage.cloud.google.com/jenkins--bucket/target/simple-maven-project-with-tests-1.0-SNAPSHOT.jar?_ga=2.105427587.-1691094040.1564573430&_gac=1.150088260.1565176910.CjwKCAjw7anqBRALEiwAgvGgm_9XD-3pInrsrsiO8PfmEWvB9l9_8nBCB_iVwA9G4FmzJCsWdjvKqxoC_W4QAvD_BwE"
         app: "cart"
