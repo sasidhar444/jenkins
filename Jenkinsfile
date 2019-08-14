@@ -19,7 +19,8 @@ node {
       }
    }
    stage('Results') {
-      junit '**/target/surefire-reports/TEST-*.xml'
+      //junit '**/target/surefire-reports/TEST-*.xml'
+       junit '*TEST-*.xml'
       archiveArtifacts '*.jar'
   
       //gsutil cp 'target/*.jar' 'gs://jenkins--bucket'
