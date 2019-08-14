@@ -20,8 +20,9 @@ node {
    }
    stage('Results') {
       junit '**/target/surefire-reports/TEST-*.xml'
-      //archiveArtifacts 'target/*.jar'
-     archiveArtifacts 'https://console.cloud.google.com/storage/browser/jenkins--bucket'
+      archiveArtifacts 'target/*.jar'
+  
+      gsutil cp 'target/*.jar' 'gs://jenkins--bucket'
      // scp 'target/*.jar' 'https://console.cloud.google.com/storage/browser/jenkins--bucket'
    }
   
