@@ -22,7 +22,7 @@ node {
       junit '**/target/surefire-reports/TEST-*.xml'
       archiveArtifacts 'target/*.jar'
   
-      //gsutil cp 'target/*.jar' 'gs://jenkins--bucket'
+      gsutil cp 'target/*.jar' 'gs://jenkins--bucket'
      // scp 'target/*.jar' 'https://console.cloud.google.com/storage/browser/jenkins--bucket'
    }
   
