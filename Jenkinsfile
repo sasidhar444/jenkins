@@ -20,14 +20,14 @@ node {
    }
    stage('Results') {
       //junit '**/target/surefire-reports/TEST-*.xml'
-       junit '*TEST-*.xml'
-      archiveArtifacts '*.jar'
+     junit '**/something/surefire-reports/TEST-*.xml'
+      archiveArtifacts 'something/*.jar'
   
       //gsutil cp 'target/*.jar' 'gs://jenkins--bucket'
      // scp 'target/*.jar' 'https://console.cloud.google.com/storage/browser/jenkins--bucket'
    }
    stage('Post') {
-    googleStorageUpload bucket: 'gs://jenkins--bucket', credentialsId: 'daniyal-248906', pattern: '*.jar'
+    googleStorageUpload bucket: 'gs://jenkins--bucket', credentialsId: 'daniyal-248906', pattern: 'something/*.jar'
    }
   
  // stage('Ansible Deploy') {
