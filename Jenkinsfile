@@ -31,10 +31,10 @@ node {
     googleStorageUpload bucket: 'gs://jenkins--bucket', credentialsId: 'daniyal-248906', pattern: 'target/*.jar'
    }
   
- //stage('Ansible Deploy') {
-  //sh 'ls -lrt'
- // sh 'ansible --version'
+ stage('Ansible Deploy') {
+  sh 'ls -lrt'
+  sh 'ansible --version'
   //sh 'ansible all -m ping -c 3 -i inventory'
-  //sh 'ansible-playbook playbook.yml -i inventory'
+  sh 'ansible-playbook playbook.yml -i inventory'
 // }
 }
