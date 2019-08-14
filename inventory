@@ -1,4 +1,4 @@
 [Master]
 localhost ansible_connection=local
-[DEV]
+[hosts]
 10.128.0.33
