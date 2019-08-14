@@ -34,7 +34,7 @@ node {
  stage('Ansible Deploy') {
   sh 'ls -lrt'
   sh 'ansible --version'
-  sh 'ansible all -m ping -c 3 -i inventory'
+  //sh 'ansible all -m ping -c 3 -i inventory'
   sh 'ansible-playbook playbook.yml -i inventory'
  }
 }
