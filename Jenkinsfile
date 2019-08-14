@@ -36,5 +36,5 @@ node {
   sh 'ansible --version'
   //sh 'ansible all -m ping -c 3 -i inventory'
   sh 'ansible-playbook playbook.yml -i inventory'
-// }
+}
 }
