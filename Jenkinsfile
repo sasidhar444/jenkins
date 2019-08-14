@@ -31,8 +31,10 @@ node {
     googleStorageUpload bucket: 'gs://jenkins--bucket', credentialsId: 'daniyal-248906', pattern: 'target/*.jar'
    }
   
- // stage('Ansible Deploy') {
-   //   junit '**/target/surefire-reports/TEST-*.xml'
-     // archiveArtifacts 'target/*.jar'
- //}
+ stage('Ansible Deploy') {
+  sh 'ls -lrt'
+  sh 'ansible --version'
+  sh 'ansible all -m ping -i inventory'
+  sh 'ansible-playbook playbook.yml -i inventory'
+ }
 }
