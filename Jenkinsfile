@@ -31,7 +31,6 @@ node {
     googleStorageUpload bucket: 'gs://project-bucket1', credentialsId:'instance 32537', pattern: 'target/*.war'
    }
   
-
 }
 
 
