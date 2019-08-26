@@ -28,7 +28,7 @@ node {
    }
    stage('Google Cloud Storage Push') {
       //gsutil cp 'target/*.jar' 'gs://jenkins--bucket'
-    googleStorageUpload bucket: 'gs://project-bucket1', credentialsId:'instance-32537', pattern: 'target/*.war'
+    googleStorageUpload bucket: 'gs://project-bucket1', credentialsId:'instance 32537', pattern: 'target/*.war'
    }
   
 
