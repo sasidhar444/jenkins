@@ -21,14 +21,14 @@ node {
    stage('Results') {
       //junit '**/target/surefire-reports/TEST-*.xml'
      //junit '**/something/surefire-reports/TEST-*.xml'
-      archiveArtifacts 'target/*.war'
+      archiveArtifacts 'target/*.jar'
   
       //gsutil cp 'target/*.jar' 'gs://jenkins--bucket'
      // scp 'target/*.jar' 'https://console.cloud.google.com/storage/browser/jenkins--bucket'
    }
    stage('Google Cloud Storage Push') {
       //gsutil cp 'target/*.jar' 'gs://jenkins--bucket'
-    googleStorageUpload bucket: 'gs://project-bucket1', credentialsId:'instance 32537', pattern: 'target/*.war'
+    googleStorageUpload bucket: 'gs://project-bucket1', credentialsId:'instance 32537', pattern: 'target/*.jar'
    }
   
 
